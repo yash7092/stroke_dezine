@@ -34,7 +34,7 @@
 
     <title>Sd stroke design</title>
     <!-- ✅ Local CSS File -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <!-- ✅ Favicon -->
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">

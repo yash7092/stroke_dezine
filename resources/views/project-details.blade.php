@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{{ asset('css/project-details.css') }}">
 
     <!-- ✅ Favicon -->
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="{{ asset('images/logo.svg') }}" type="image/svg+xml">
 
     <!-- ✅ Font Awesome (Latest + Secure) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
