@@ -232,7 +232,7 @@
                 </div>
 
                 <div class="service-card custom-fade-in" data-aos="zoom-in-right" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Software Development" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/desk.jpg" alt="Software Development" class="service-icon">
+                    <img src="images/desk.png" alt="Software Development" class="service-icon">
                     <div>
                         <div class="service-title">
                             <h1>Software Development</h1>
