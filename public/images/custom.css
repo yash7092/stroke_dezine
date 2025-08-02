@@ -1,0 +1,28 @@
+/* resources/css/custom.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* padding-top to avoid content hidden under navbar */
+body {
+    padding-top: 64px; /* Adjust if navbar height changes */
+}
+
+/* Navbar styles (if you want to add some) */
+nav {
+    background-color: #1e40af; /* Tailwind's bg-blue-900 */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Active nav link example */
+.active-nav-link {
+    color: #fbbf24; /* Tailwind's text-yellow-400 */
+    font-weight: 600;
+}
