@@ -309,30 +309,8 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>+1 234 567 123</p>
-                <p>hello@strokedezine.com</p>
-            </div>
+        @include('components.footer')
 
-            <div class="footer-col">
-                <h4>Head Quarters</h4>
-                <p>Stroke Dezine Pvt. Ltd.</p>
-                <p>547 The Point St, Columbus</p>
-                <p>OH 43201, USA</p>
-            </div>
-
-            <div class="footer-col logo-col">
-                <img src="images/logo.svg" alt="Logo" />
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Stroke Dezine. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
