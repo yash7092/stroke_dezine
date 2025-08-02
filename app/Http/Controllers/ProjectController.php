@@ -15,34 +15,10 @@ class ProjectController extends Controller
                 'mainImage' => 'images/01.jpg',
                 'relatedImages' => [
                     [
-                        'src' => 'images/01.jpg',
+                        'src' => 'images/BANNER/1.jpg',
                         'title' => 'Logo Design',
                         'description' => 'Modern and minimalist logo design for the brand identity.',
                         'size' => 'large'
-                    ],
-                    [
-                        'src' => 'images/02.jpg',
-                        'title' => 'Business Card Mockup',
-                        'description' => 'Professional business card design with brand elements.',
-                        'size' => 'medium'
-                    ],
-                    [
-                        'src' => 'images/03.jpg',
-                        'title' => 'Website Design',
-                        'description' => 'Responsive website design showcasing the brand.',
-                        'size' => 'large'
-                    ],
-                    [
-                        'src' => 'images/04.jpg',
-                        'title' => 'Social Media Graphics',
-                        'description' => 'Consistent social media graphics for brand promotion.',
-                        'size' => 'small'
-                    ],
-                    [
-                        'src' => 'images/01.jpg',
-                        'title' => 'Print Materials',
-                        'description' => 'Brochures and flyers designed for print marketing.',
-                        'size' => 'medium'
                     ]
                 ]
             ],
@@ -119,40 +95,10 @@ class ProjectController extends Controller
                 'mainImage' => 'images/03.jpg',
                 'relatedImages' => [
                     [
-                        'src' => 'images/03.jpg',
+                        'src' => 'images/PACKAGING/1.jpg',
                         'title' => 'T-Shirt Collection',
                         'description' => 'Creative t-shirt designs for different target audiences.',
                         'size' => 'large'
-                    ],
-                    [
-                        'src' => 'images/04.jpg',
-                        'title' => 'Fashion Illustration',
-                        'description' => 'Detailed fashion illustrations for the collection.',
-                        'size' => 'medium'
-                    ],
-                    [
-                        'src' => 'images/01.jpg',
-                        'title' => 'Pattern Design',
-                        'description' => 'Unique pattern designs for fabric applications.',
-                        'size' => 'small'
-                    ],
-                    [
-                        'src' => 'images/02.jpg',
-                        'title' => 'Product Mockups',
-                        'description' => 'Realistic product mockups for marketing materials.',
-                        'size' => 'medium'
-                    ],
-                    [
-                        'src' => 'images/03.jpg',
-                        'title' => 'Brand Identity',
-                        'description' => 'Complete brand identity for the apparel line.',
-                        'size' => 'large'
-                    ],
-                    [
-                        'src' => 'images/04.jpg',
-                        'title' => 'Marketing Materials',
-                        'description' => 'Comprehensive marketing materials for the collection.',
-                        'size' => 'small'
                     ]
                 ]
             ],
