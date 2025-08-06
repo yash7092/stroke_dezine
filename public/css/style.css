@@ -1,17 +1,75 @@
-:root {
-  --primary-color: rgb(39, 69, 111);
-  --font-family: 'Montserrat', sans-serif;
-  --background-color: #F8F5F1;
-  --text-color: #222;
-  --text-muted: #555;
-  scroll-padding-top: 5.5rem;
-  
-  /* Improved responsive typography scale */
-  --font-size-sm: clamp(0.75rem, 1.5vw, 0.9rem);
-  --font-size-base: clamp(0.9rem, 2vw, 1.1rem);
-  --font-size-lg: clamp(1rem, 2.5vw, 1.3rem);
-}
+/* ========================================
+   STROKE DEZINE - MAIN STYLESHEET
+   ========================================
+   
+   This stylesheet contains all the styles for the Stroke Dezine website.
+   It is organized into logical sections for better maintainability:
+   
+   1. CSS Variables & Custom Properties
+   2. Reset & Base Styles
+   3. Logo Styles
+   4. Header & Navigation
+   5. Home Section
+   6. About Section
+   7. Services Section
+   8. Projects Section
+   9. Contact Section
+   10. Footer Section
+   11. Accessibility & Utilities
+   12. Buttons & Interactive Elements
+   13. Animations & Transitions
+   14. Responsive Design (Mobile, Tablet, Large Screens, Ultra-Wide)
+   
+   ======================================== */
 
+/* ========================================
+   CSS VARIABLES & CUSTOM PROPERTIES
+   ======================================== */
+   :root {
+    --primary-color: rgb(39, 69, 111);
+    --font-family: 'Montserrat', sans-serif;
+    --background-color: #F8F5F1;
+    --text-color: #222;
+    --text-muted: #555;
+    scroll-padding-top: 5.5rem;
+    
+    /* Base scale factor - this will multiply all sizes */
+    --scale-factor: 1;
+    
+    /* Typography scale using rem and scale factor */
+    --font-size-xs: calc(0.75rem * var(--scale-factor));
+    --font-size-sm: calc(0.875rem * var(--scale-factor));
+    --font-size-base: calc(1rem * var(--scale-factor));
+    --font-size-lg: calc(1rem * var(--scale-factor));
+    --font-size-xl: calc(1rem * var(--scale-factor));
+    --font-size-2xl: calc(1.3rem * var(--scale-factor));
+    --font-size-3xl: calc(1.5rem * var(--scale-factor));
+    
+    /* Spacing scale */
+    --spacing-xs: calc(0.25rem * var(--scale-factor));
+    --spacing-sm: calc(0.5rem * var(--scale-factor));
+    --spacing-md: calc(1rem * var(--scale-factor));
+    --spacing-lg: calc(1.5rem * var(--scale-factor));
+    --spacing-xl: calc(2rem * var(--scale-factor));
+    --spacing-2xl: calc(3rem * var(--scale-factor));
+    
+    /* Container and section spacing */
+    --container-padding: calc(1rem * var(--scale-factor));
+    --section-padding: calc(2rem * var(--scale-factor));
+    
+    /* Icon sizes */
+    --icon-size-sm: calc(1.5rem * var(--scale-factor));
+    --icon-size-md: calc(2rem * var(--scale-factor));
+    --icon-size-lg: calc(3rem * var(--scale-factor));
+    --icon-size-xl: calc(4rem * var(--scale-factor));
+    
+    /* Image scaling */
+    --img-scale: var(--scale-factor);
+  }
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +78,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: clamp(14px, 2.5vw, 17px); /* More fluid than breakpoint-based sizing */
+  font-size: clamp(14px, 2.5vw, 18px); /* Enhanced fluid sizing */
   scroll-padding-top: 5.5rem;
   overflow-x: hidden;
 }
@@ -29,10 +87,11 @@ body {
   font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  overflow-x: hidden; /* Fixed: removed conflicting overflow properties */
-  font-size: var(--font-size-base); /* Use CSS custom property */
+  overflow-x: hidden;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
   -ms-overflow-style: none;
-  -webkit-font-smoothing: antialiased; /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -40,22 +99,28 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* ========================================
+   LOGO STYLES
+   ======================================== */
 .logo img {
   width: clamp(6.5rem, 8vw, 10.5rem); /* Responsive logo sizing */
   mix-blend-mode: darken;
   height: auto; /* Maintain aspect ratio */
 }
 
+/* ========================================
+   HEADER & NAVIGATION
+   ======================================== */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   background: #fff;
-  border-bottom: 6px solid var(--primary-color);
+  border-bottom: clamp(4px, 0.5vw, 8px) solid var(--primary-color);
   color: var(--primary-color);
   z-index: 1000;
-  padding: 1rem clamp(2rem, 5vw, 8rem); /* Much more responsive padding */
-  transition: padding 0.3s ease; /* Smooth padding transitions */
+  padding: var(--spacing-sm) var(--container-padding);
+  transition: all 0.3s ease;
 }
 
 nav {
@@ -63,21 +128,21 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  gap: clamp(0.5rem, 2vw, 1rem); /* Responsive gap */
-  max-width: 1400px; /* Prevent excessive stretching on large screens */
+  gap: var(--spacing-sm);
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: clamp(0.6rem, 1.5vw, 1rem); /* Responsive menu item spacing */
+  gap: var(--spacing-sm);
 }
 
 .nav-menu li {
   position: relative;
   font-size: var(--font-size-sm);
-  padding: 0.25rem 0;
+  padding: var(--spacing-xs) 0;
 }
 
 .nav-menu li a {
@@ -162,6 +227,9 @@ nav {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - LARGE SCREENS
+   ======================================== */
 /* Improved Large Screens */
 @media screen and (min-width: 1440px) {
   header {
@@ -273,12 +341,14 @@ nav {
 }
 
 
-/* Home Section */
+/* ========================================
+   HOME SECTION
+   ======================================== */
 #home {
   position: relative;
   width: 100%;
   min-height: 80vh;
-  padding: 9rem 1rem 1rem 1rem; /* Increased top padding for more space from top */
+  padding: clamp(6rem, 12vw, 10rem) var(--container-padding) var(--section-padding);
   background: var(--background-color);
 }
 
@@ -291,8 +361,8 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem; /* Increased gap for better separation */
-  padding: 2rem 1rem;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) var(--container-padding);
 }
 
 .home-text {
@@ -302,20 +372,20 @@ nav {
   text-align: center;
   width: 50%;
   min-width: 220px;
-  padding-bottom: 2rem;
+  padding-bottom: var(--spacing-lg);
 }
 
 .home-text h1 {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: var(--font-size-2xl);
   line-height: 1.2;
   color: var(--primary-color);
   text-align: center;
+  margin-bottom: var(--spacing-md);
 }
 
 .home-text p {
-  margin-top: 1rem;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--text-muted);
   text-align: center;
@@ -331,7 +401,7 @@ nav {
 
 .home-image img {
   width: 100%;
-  max-width: 260px; /* Reduced image size */
+  max-width: 500px; /* Reduced image size */
   height: auto;
   object-fit: contain;
   display: block;
@@ -452,9 +522,12 @@ nav {
   }
 }
 
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
 #about {
   min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: var(--section-padding) var(--container-padding);
   background: var(--background-color);
   color: var(--text-color);
   display: flex;
@@ -468,13 +541,13 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  padding: 0 1rem;
+  gap: var(--spacing-xl);
+  padding: 0 var(--container-padding);
 }
 
 .about-image {
   flex: 1 1 350px;
-  max-width: 350px;
+  max-width: clamp(280px, 30vw, 450px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -485,7 +558,7 @@ nav {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: clamp(12px, 1.5vw, 20px);
   display: block;
   transition: transform 0.3s ease;
 }
@@ -502,15 +575,17 @@ nav {
 }
 
 .about-text h2 {
-  font-size: 3.0rem;
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .about-text h3 {
-  font-size: 2.0rem;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
 }
 
 .about-text p {
-  font-size: 1.0rem;
+  font-size: var(--font-size-lg);
   line-height: 1.8;
 }
 
@@ -534,7 +609,7 @@ nav {
     text-align: center;
   }
   .about-image {
-    max-width: 550px;
+    max-width: 500px;
     margin: 0 auto;
   }
   .about-text {
@@ -589,17 +664,18 @@ nav {
 }
 
 
-/* Service Section */
-
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
 .services-section {
-    padding: 1.875rem 2.25rem;
+    padding: var(--section-padding) var(--container-padding);
     text-align: center;
 }
 
 .services-section h2 {
     color: #0a3a3a;
-    margin-bottom: 2.5rem;
-    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-2xl);
     letter-spacing: 0.0625rem;
 }
 
@@ -614,10 +690,10 @@ nav {
 
 .service-card {
     background-color: #fff;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
+    border-radius: clamp(8px, 1vw, 16px);
+    padding: var(--spacing-md);
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
-    gap: 0.9375rem;
+    gap: var(--spacing-sm);
     transition: opacity 0.3s ease, transform 0.4s ease;
     text-align: left;
     display: flex;
@@ -630,23 +706,23 @@ nav {
 }
 
 .service-icon {
-    width: 4.375rem;
-    height: 4.375rem;
+    width: var(--icon-size-lg);
+    height: var(--icon-size-lg);
     flex-shrink: 0;
     object-fit: contain;
 }
 
 .service-title {
-    font-size: 1rem;
+    font-size: var(--font-size-lg);
     font-weight: bold;
     color: #333;
-    margin-bottom: 0.375rem;
+    margin-bottom: var(--spacing-xs);
     display: flex;
     justify-content: center;
 }
 
 .service-card p {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     color: rgb(39, 69, 111);
     margin: 0;
 }
@@ -735,6 +811,9 @@ nav {
 }
 
 
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
 .projects-section {
   min-height: 80vh;
   display: flex;
@@ -925,6 +1004,126 @@ nav {
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - COMPREHENSIVE
+   ======================================== */
+
+/* Mobile First Approach - Base styles for all screen sizes */
+@media (max-width: 480px) {
+  :root {
+    --scale-factor: 0.8;
+  }
+  
+  .logo img {
+    width: clamp(4rem, 6vw, 6rem);
+  }
+  
+  header {
+    padding: var(--spacing-xs) var(--container-padding);
+  }
+  
+  .nav-menu li a {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    font-size: var(--font-size-sm);
+  }
+  
+  .home-text h1 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .home-text p {
+    font-size: var(--font-size-sm);
+  }
+  
+  .about-text h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .about-text h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about-text p {
+    font-size: var(--font-size-sm);
+  }
+  
+  .service-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .service-icon {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+  }
+  
+  .service-title {
+    font-size: var(--font-size-sm);
+  }
+  
+  .service-card p {
+    font-size: var(--font-size-xs);
+  }
+  
+  .contact-form {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    font-size: var(--font-size-sm);
+  }
+  
+  .send-btn {
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+  
+  .footer-col h4 {
+    font-size: var(--font-size-sm);
+  }
+  
+  .footer-col p {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    --scale-factor: 0.9;
+  }
+}
+
+/* Desktop Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --scale-factor: ;
+  }
+}
+
+/* Large Desktop Responsive */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  :root {
+    --scale-factor: 1.1;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  :root {
+    --scale-factor: 1.2;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1921px) {
+  :root {
+    --scale-factor: 1.4;
+  }
+}
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
 /* Responsive Tweaks */
 @media (max-width: 768px) {
   .projects-title {
@@ -980,22 +1179,23 @@ nav {
 
 
 
-/* Contact Section */
-
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
 .contact-section {
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 1.5rem;
+    padding: var(--section-padding) var(--container-padding);
 }
 
 .contact-form {
     width: 100%;
     max-width: 900px;
-    padding: 3rem 2rem 2rem;
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
     background-color: #fff;
-    border-radius: 12px;
+    border-radius: clamp(8px, 1.5vw, 16px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -1031,24 +1231,25 @@ nav {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1.2rem 0.75rem 0.5rem;
-    font-size: 1rem;
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-xs);
+    font-size: var(--font-size-base);
     background-color: #f1f2f3;
     color: #333;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: clamp(4px, 0.5vw, 8px);
     outline: none;
     resize: none;
 }
 
 .form-group label {
     position: absolute;
-    left: 0.75rem;
-    top: 1rem;
-    padding: 0 0.25rem;
+    left: var(--spacing-sm);
+    top: var(--spacing-md);
+    padding: 0 var(--spacing-xs);
     color: #777;
     transition: 0.2s ease;
     pointer-events: none;
+    font-size: var(--font-size-sm);
 }
 
 .form-group input:focus+label,
@@ -1064,12 +1265,12 @@ nav {
 .send-btn {
     display: block;
     margin: 0 auto;
-    padding: 10px 40px;
+    padding: var(--spacing-sm) var(--spacing-xl);
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 20px;
-    font-size: 14px;
+    border-radius: clamp(16px, 2vw, 24px);
+    font-size: var(--font-size-base);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -1200,25 +1401,26 @@ nav {
 }
 
 
-/* Footer Section */
-
+/* ========================================
+   FOOTER SECTION
+   ======================================== */
 .footer {
     background-color: #f7f7f7;
-    padding: 3rem 1rem 1rem;
+    padding: var(--spacing-xl) var(--container-padding) var(--spacing-sm);
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
-    border-top: 4px solid var(--primary-color);
+    border-top: clamp(3px, 0.4vw, 6px) solid var(--primary-color);
 }
 
 .footer-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 5rem;
+    gap: var(--spacing-2xl);
     flex-wrap: wrap;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--spacing-lg);
 }
 
 .footer-col {
@@ -1228,11 +1430,13 @@ nav {
 }
 
 .footer-col h4 {
-    font-size: 0.95rem;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .footer-col p {
-    font-size: 0.8rem;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
 }
 
 .footer-bottom {
@@ -1307,6 +1511,9 @@ nav {
   }
 }
 
+/* ========================================
+   ACCESSIBILITY & UTILITIES
+   ======================================== */
 /* Accessibility: Skip to Content Link */
 .skip-to-content {
   position: absolute;
@@ -1339,6 +1546,9 @@ nav {
   border: 0;
 }
 
+/* ========================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ======================================== */
 /* Buttons & Links: Improved Focus & Touch Area */
 button, .send-btn, .submit-btn, .nav-btn, .close-btn, .zoom-nav, .dot, .zoom-dots .dot {
   min-width: 44px;
@@ -1388,6 +1598,9 @@ a:focus {
   }
 }
 
+/* ========================================
+   ANIMATIONS & TRANSITIONS
+   ======================================== */
 /* Custom fade-in animation for scroll-triggered sections */
 .custom-fade-in {
   opacity: 0;
@@ -1537,6 +1750,9 @@ a:focus {
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - ULTRA-WIDE SCREENS
+   ======================================== */
 /* === Ultra-Wide Screens (27-inch, 1440px+) === */
 @media (min-width: 1440px) {
   .footer-content {
@@ -1829,7 +2045,7 @@ a:focus {
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    padding: 2rem 1rem;
+    padding: 7rem 1rem;
   }
   .home-text, .home-image {
     width: 50%;
