@@ -854,9 +854,22 @@ body::-webkit-scrollbar {
     }
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (min-width: 800px)and (max-width: 1800px) {
+    .project-title {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media screen and (min-width: 1800px)and (max-width: 2800px) {
     .project-title {
         font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    .project-title {
+        font-size: 1.5rem;
     }
 
     .gallery-item.size-large,
