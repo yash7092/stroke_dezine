@@ -32,9 +32,9 @@
         content="We deliver high-quality, professional design services including branding, web design, and more. Elevate your business with Stroke Dezine.">
     <meta name="twitter:image" content="https://strokedezine.com/logo.svg" />
 
-    <title>Sd stroke design</title>
-    <!-- ✅ Local CSS File -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <title>Stroke Dezine</title>
+    <!-- Clean Modern CSS -->
+    <link rel="stylesheet" href="{{ asset('css/clean-style.css') }}">
 
     <!-- ✅ Favicon -->
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
@@ -120,99 +120,86 @@
         </section>
 
         <section class="services-section" id="services">
-            <h2 class="custom-fade-in">OUR SERVICES</h2>
+            <h2>OUR SERVICES</h2>
             <div class="services-grid">
-                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Creative Design" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/1st.png" alt="Creative Design" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Creative Design</h1>
-                        </div>
-                        <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than
-                            words.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Creative Design</h3>
+                    </div>
+                    <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than words.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="fade-right" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Virtual Samples" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/2nd.png" alt="Virtual Samples" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Virtual Samples</h1>
-                        </div>
-                        <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.
-                        </p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Virtual Samples</h3>
+                    </div>
+                    <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="fade-left" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Raster to Vector" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/3rd.png" alt="Raster to Vector" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Raster to Vector</h1>
-                        </div>
-                        <p>Convert your documents into electronic formats securely without any hassles with Stroke Dezine
-                        </p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-vector-square"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Raster to Vector</h3>
+                    </div>
+                    <p>Convert your documents into electronic formats securely without any hassles.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Web Design" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/7th.png" alt="Web Design" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Web Design</h1>
-                        </div>
-                        <p>Make your way to the online world with our captivating Web Design services!</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Web Design</h3>
+                    </div>
+                    <p>Make your way to the online world with our captivating Web Design services!</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="zoom-in" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Files Ready to Print" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/8th.png" alt="Files Ready to Print" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Files Ready to Print</h1>
-                        </div>
-                        <p>Cost-effective and custom print service from the best in the business.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Files Ready to Print</h3>
+                    </div>
+                    <p>Cost-effective and custom print service from the best in the business.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Branding" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/4th.png" alt="Branding" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Branding</h1>
-                        </div>
-                        <p>We provide powerful branding services that will grow your business to new zeniths.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-trademark"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Branding</h3>
+                    </div>
+                    <p>We provide powerful branding services that will grow your business to new heights.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Apparel Design" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/5th.png" alt="Apparel Design" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Apparel Design</h1>
-                        </div>
-                        <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tshirt"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Apparel Design</h3>
+                    </div>
+                    <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Color Separation" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/6th.png" alt="Color Separation" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Color Separation</h1>
-                        </div>
-                        <p>Get the best color separation service with top-notch results.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
-                </div>
-
-                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Promotional Product Design" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/9th.png" alt="Promotional Design" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Promotional Product Design</h1>
-                        </div>
-                        <p>Your product design should speak the quality & features, and we take that seriously!</p>
+                    <div class="service-title">
+                        <h3>Color Separation</h3>
                     </div>
+                    <p>Get the best color separation service with top-notch results.</p>
                 </div>
             </div>
 
@@ -221,35 +208,34 @@
             </div>
 
             <div class="services-grid">
-                <div class="service-card custom-fade-in" data-aos="zoom-in-left" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Mobile App Development" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/mobile.jpg" alt="Mobile App Development" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Mobile App Development</h1>
-                        </div>
-                        <p>Developing user-friendly and high-performance applications for Android and iOS devices</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Mobile App Development</h3>
+                    </div>
+                    <p>Developing user-friendly and high-performance applications for Android and iOS devices.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="zoom-in-right" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Software Development" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/desk.png" alt="Software Development" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Software Development</h1>
-                        </div>
-                        <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.
-                        </p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Software Development</h3>
+                    </div>
+                    <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.</p>
                 </div>
 
-                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Web Development" onkeydown="if(event.key==='Enter'){goToHome();}">
-                    <img src="images/web.png" alt="Web Development" class="service-icon">
-                    <div>
-                        <div class="service-title">
-                            <h1>Web Development</h1>
-                        </div>
-                        <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
+                    <div class="service-title">
+                        <h3>Web Development</h3>
+                    </div>
+                    <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
                 </div>
             </div>
         </section>
@@ -272,39 +258,33 @@
         </section>
 
         <section class="contact-section" id="contact">
-            <div class="contact-form custom-fade-in">
+            <div class="contact-form">
+                <h2>Get In Touch</h2>
                 <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
                     @csrf
-                    <div class="row two-cols">
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder=" " required />
-                            <label>Name</label>
+                            <input type="text" name="name" placeholder="Name" required />
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder=" " required />
-                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Email" required />
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder=" " required />
-                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="Subject" required />
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <div class="form-group">
-                            <textarea name="message" rows="5" placeholder=" " required></textarea>
-                            <label>Message</label>
+                            <textarea name="message" rows="5" placeholder="Describe what you need" required></textarea>
                         </div>
                     </div>
-                    <div class="row center">
-                        <button type="submit" id="sendBtn" class="send-btn">
-                            <span id="btnText">Send Message</span>
-                            <span id="btnLoader" style="display: none;">Sending...</span>
-                        </button>
-                    </div>
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                    </button>
                 </form>
-                <div id="successPopup" style="display:none;">Mail sent successfully!</div>
+                <div id="successPopup" style="display:none; padding: var(--space-4); background: #48bb78; color: white; border-radius: 8px; text-align: center; margin-top: var(--space-4);">Mail sent successfully!</div>
             </div>
         </section>
     </main>
@@ -315,6 +295,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
+        // Navigation Menu Toggle
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
             const menuToggle = document.querySelector('.menu-toggle');
@@ -338,137 +319,71 @@
                     }
                 });
             });
-        });
 
-        const images = document.querySelectorAll('.slide img');
-        const zoomedImg = document.getElementById('zoomedImage');
-        const zoomDots = document.getElementById('zoomDots');
-        const sliderTrack = document.getElementById('customSliderTrack');
-        const dotsContainer = document.getElementById('customSliderDots');
-        const slides = document.querySelectorAll('.slide');
-
-        let currentIndex = 0;
-        let zoomIndex = 0;
-        let autoSlideTimer;
-
-        // === Slideshow Dots ===
-        slides.forEach((_, i) => {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.onclick = () => {
-                currentIndex = i;
-                updateSlider();
-                resetAutoSlide();
-            };
-            dotsContainer.appendChild(dot);
-        });
-
-        function updateSlider() {
-            sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-            document.querySelectorAll('.dots-container .dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true
             });
-        }
+        });
 
-        function moveSlide(step) {
-            currentIndex += step;
-            if (currentIndex >= slides.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = slides.length - 1;
+        // Custom Project Slider Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderTrack = document.getElementById('customSliderTrack');
+            const dotsContainer = document.getElementById('customSliderDots');
+            const slides = document.querySelectorAll('.custom-slide');
+
+            let currentIndex = 0;
+            let autoSlideTimer;
+
+            if (!slides.length) return;
+
+            // Create dots for slider
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.classList.add('custom-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.onclick = () => {
+                    currentIndex = i;
+                    updateSlider();
+                    resetAutoSlide();
+                };
+                dotsContainer.appendChild(dot);
+            });
+
+            function updateSlider() {
+                if (sliderTrack && slides.length > 0) {
+                    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    
+                    // Update dots
+                    const dots = document.querySelectorAll('.custom-dot');
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === currentIndex);
+                    });
+                }
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlider();
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideTimer);
+                autoSlideTimer = setInterval(nextSlide, 4000);
+            }
+
+            // Initialize slider
             updateSlider();
             resetAutoSlide();
-        }
-
-        // === Auto Slide every 5 seconds ===
-        function startAutoSlide() {
-            autoSlideTimer = setInterval(() => {
-                moveSlide(1);
-            }, 2500); // 2500ms = 2.5s
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideTimer);
-            startAutoSlide();
-        }
-
-        // === Zoom Modal ===
-        function zoomImage(img) {
-            zoomIndex = Array.from(images).indexOf(img);
-            updateZoomModal();
-            document.getElementById('zoomModal').style.display = 'flex';
-        }
-
-        function closeZoom() {
-            document.getElementById('zoomModal').style.display = 'none';
-        }
-
-        function zoomNavigate(step) {
-            zoomIndex += step;
-            if (zoomIndex >= images.length) zoomIndex = 0;
-            if (zoomIndex < 0) zoomIndex = images.length - 1;
-            updateZoomModal();
-        }
-
-        function updateZoomModal() {
-            zoomedImg.src = images[zoomIndex].src;
-            renderZoomDots();
-        }
-
-        function renderZoomDots() {
-            zoomDots.innerHTML = '';
-            images.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                if (i === zoomIndex) dot.classList.add('active');
-                dot.onclick = () => {
-                    zoomIndex = i;
-                    updateZoomModal();
-                };
-                zoomDots.appendChild(dot);
-            });
-        }
-
-        // Keyboard Support
-        document.addEventListener('keydown', (e) => {
-            const modal = document.getElementById('zoomModal');
-            if (modal.style.display === 'flex') {
-                if (e.key === 'Escape') closeZoom();
-                if (e.key === 'ArrowLeft') zoomNavigate(-1);
-                if (e.key === 'ArrowRight') zoomNavigate(1);
-            }
         });
 
-        // === Start everything ===
-        updateSlider();
-        startAutoSlide(); // begin auto slide on page load
+        function goToProject(projectId) {
+            // You can implement project detail navigation here
+            console.log('Go to project:', projectId);
+        }
 
-
-        const serviceCards = document.querySelectorAll(".services-grid .service-card");
-
-        serviceCards.forEach(card => {
-            card.addEventListener("mouseenter", () => {
-                serviceCards.forEach(c => {
-                    if (c !== card) {
-                        c.classList.add("dimmed");
-                        c.classList.remove("active");
-                    } else {
-                        c.classList.add("active");
-                    }
-                });
-            });
-
-            card.addEventListener("mouseleave", () => {
-                serviceCards.forEach(c => {
-                    c.classList.remove("dimmed", "active");
-                });
-            });
-        });
-
-        AOS.init({
-            duration: 1000,
-            once: false, // 👈 animate every time
-        });
-
+        // Contact form handling
         const form = document.getElementById("contactForm");
         const btn = document.getElementById("sendBtn");
         const btnText = document.getElementById("btnText");
