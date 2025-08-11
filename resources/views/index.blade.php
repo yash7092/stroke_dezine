@@ -327,56 +327,7 @@
             });
         });
 
-        // Custom Project Slider Functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const sliderTrack = document.getElementById('customSliderTrack');
-            const dotsContainer = document.getElementById('customSliderDots');
-            const slides = document.querySelectorAll('.custom-slide');
-
-            let currentIndex = 0;
-            let autoSlideTimer;
-
-            if (!slides.length) return;
-
-            // Create dots for slider
-            slides.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('custom-dot');
-                if (i === 0) dot.classList.add('active');
-                dot.onclick = () => {
-                    currentIndex = i;
-                    updateSlider();
-                    resetAutoSlide();
-                };
-                dotsContainer.appendChild(dot);
-            });
-
-            function updateSlider() {
-                if (sliderTrack && slides.length > 0) {
-                    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    
-                    // Update dots
-                    const dots = document.querySelectorAll('.custom-dot');
-                    dots.forEach((dot, i) => {
-                        dot.classList.toggle('active', i === currentIndex);
-                    });
-                }
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                updateSlider();
-            }
-
-            function resetAutoSlide() {
-                clearInterval(autoSlideTimer);
-                autoSlideTimer = setInterval(nextSlide, 4000);
-            }
-
-            // Initialize slider
-            updateSlider();
-            resetAutoSlide();
-        });
+        // Slider functionality is handled by the advanced script below
 
         function goToProject(projectId) {
             // You can implement project detail navigation here
@@ -385,46 +336,50 @@
 
         // Contact form handling
         const form = document.getElementById("contactForm");
-        const btn = document.getElementById("sendBtn");
-        const btnText = document.getElementById("btnText");
-        const btnLoader = document.getElementById("btnLoader");
+        const btn = document.querySelector(".submit-btn");
         const popup = document.getElementById("successPopup");
 
-        form.addEventListener("submit", async function(e) {
-            e.preventDefault();
-            btn.disabled = true;
-            btnText.style.display = "none";
-            btnLoader.style.display = "inline";
+        if (form && btn) {
+            form.addEventListener("submit", async function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                const originalText = btn.textContent;
+                btn.disabled = true;
+                btn.textContent = "Sending...";
 
-            const formData = new FormData(form);
+                const formData = new FormData(form);
 
-            try {
-                const response = await fetch("{{ url('/sendmail') }}", {
-                    method: "POST",
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    body: formData
-                });
+                try {
+                    const response = await fetch("{{ url('/sendmail') }}", {
+                        method: "POST",
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: formData
+                    });
 
-                const result = await response.json();
+                    const result = await response.json();
 
-                if (result.status === "success") {
-                    form.reset();
-                    popup.style.display = "block";
-                    setTimeout(() => popup.style.display = "none", 2000);
-                } else {
-                    alert("Message failed. Try again.");
+                    if (result.status === "success") {
+                        form.reset();
+                        if (popup) {
+                            popup.style.display = "block";
+                            setTimeout(() => popup.style.display = "none", 3000);
+                        }
+                    } else {
+                        alert("Message failed. Try again.");
+                    }
+                } catch (err) {
+                    alert("An error occurred.");
+                    console.error(err);
                 }
-            } catch (err) {
-                alert("An error occurred.");
-                console.error(err);
-            }
 
-            btn.disabled = false;
-            btnText.style.display = "inline";
-            btnLoader.style.display = "none";
-        });
+                // Reset button state
+                btn.disabled = false;
+                btn.textContent = originalText;
+            });
+        }
 
         function goToHome() {
             window.location.href = window.location.origin + window.location.pathname;
