@@ -121,9 +121,9 @@
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px; /* Reduced from 1400px */
     margin: 0 auto;
     align-items: start;
 }
@@ -133,13 +133,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: none;
+    max-width: 1000px; /* Added max-width constraint */
     width: 100%;
     padding: 0 2rem;
+    margin: 0 auto; /* Center the container */
 }
 
 .gallery-grid:not(.grid-3-cols) .gallery-item {
-    max-width: 95%;
+    max-width: 80%; /* Reduced from 95% to 80% */
     width: 100%;
     margin: 0;
     flex: 1;
@@ -148,21 +149,22 @@
 .gallery-grid.grid-3-cols {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px; /* Reduced from 30px */
     justify-items: stretch;
     align-items: start;
-    max-width: none;
+    max-width: 1100px; /* Added max-width constraint */
     width: 100%;
     padding: 0 2rem;
-    margin: 0;
+    margin: 0 auto; /* Center the container */
 }
 
 /* Enhanced responsive breakpoints */
 @media screen and (min-width: 1400px) {
     .gallery-grid.grid-3-cols {
         grid-template-columns: repeat(3, 1fr);
-        gap: 35px;
+        gap: 25px; /* Reduced from 35px */
         padding: 0 3rem;
+        max-width: 1200px; /* Constrain size on large screens */
     }
 }
 
@@ -612,110 +614,4 @@
     }
 }
 
-/* Footer uses original style.css styling with increased width */
-.footer-content {
-    max-width: 1600px !important;
-    gap: 5rem !important;
-    padding: 0 2rem !important;
-}
-
-.footer-col {
-    flex: 1 1 350px !important;
-    min-width: 350px !important;
-    max-width: 500px !important;
-}
-
-.logo-col img {
-    width: 300px !important;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .footer-content {
-        max-width: 1400px !important;
-        gap: 4rem !important;
-    }
-
-    .footer-col {
-        flex: 1 1 300px !important;
-        min-width: 300px !important;
-        max-width: 450px !important;
-    }
-
-    .logo-col img {
-        width: 280px !important;
-    }
-}
-
-@media (max-width: 800px) {
-    .footer-content {
-        max-width: 100% !important;
-        gap: 3rem !important;
-        padding: 0 1rem !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .footer-col {
-        flex: 1 1 auto !important;
-        min-width: 250px !important;
-        max-width: 400px !important;
-        text-align: center !important;
-    }
-
-    .logo-col img {
-        width: 250px !important;
-    }
-}
-
-@media (max-width: 600px) {
-    .footer-content {
-        gap: 2rem !important;
-        padding: 0 0.5rem !important;
-    }
-
-    .footer-col {
-        min-width: 200px !important;
-        max-width: 350px !important;
-    }
-
-    .logo-col img {
-        width: 200px !important;
-    }
-}
-
-/* Big Screen Laptops (1440px and above) */
-@media (min-width: 1440px) {
-    .footer-content {
-        max-width: 1800px !important;
-        gap: 6rem !important;
-    }
-
-    .footer-col {
-        flex: 1 1 400px !important;
-        min-width: 400px !important;
-        max-width: 550px !important;
-    }
-
-    .logo-col img {
-        width: 350px !important;
-    }
-}
-
-/* Ultra-wide screens (1800px and above) */
-@media (min-width: 1800px) {
-    .footer-content {
-        max-width: 2000px !important;
-        gap: 7rem !important;
-    }
-
-    .footer-col {
-        flex: 1 1 450px !important;
-        min-width: 450px !important;
-        max-width: 600px !important;
-    }
-
-    .logo-col img {
-        width: 400px !important;
-    }
-} 
+/* Footer overrides removed - now uses clean-style.css footer styling to match main page */

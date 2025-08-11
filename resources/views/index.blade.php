@@ -83,12 +83,12 @@
                 <div class="home-content">
                     <div class="home-text custom-fade-in">
                         <h1>
-                            Nothing is Possible <br />
-                            Without Stroke, Everything <br />
-                            Starts with Stroke and Ends with Stroke
+                            Nothing is Possible<br>
+                            Without Stroke, Everything<br>
+                            Starts with Stroke and Ends with Stroke.
                         </h1>
                         <p>
-                            We create compelling designs that connect deeply and<br />
+                            We create compelling designs that connect deeply and<br>
                             inspire action from your customers
                         </p>
                     </div>
@@ -109,10 +109,9 @@
                         <h2>About us</h2>
                         <h3>Premium Design Services for Your Business</h3>
                         <p>
-                            Stroke Dezine is a team of talented designers dedicated to creating
-                            exceptional visual solutions for your brand. We blend creativity
-                            and professionalism to deliver high-quality design services that
-                            help you stand out.
+                            Stroke Dezine is a team of talented designers dedicated to creating exceptional
+                            visual solutions for your brand. We blend creativity and professionalism to
+                            deliver high-quality design services that help you stand out.
                         </p>
                     </div>
                 </div>
@@ -439,7 +438,7 @@
     </script>
     <script>
 // True carousel slider logic with dynamic slide width
-const imagesCount = document.querySelectorAll('#customSliderTrack .custom-slide').length;
+const imagesCount = 4; // Only 4 unique images, ignore duplicates
 let slidesToShow = 3;
 let current = 0;
 const track = document.getElementById('customSliderTrack');
@@ -459,8 +458,13 @@ function updateSlider() {
     const availableWidth = container.offsetWidth - containerPadding - trackPadding;
     const slideWidth = (availableWidth - gap * (slidesToShow - 1)) / slidesToShow;
     
-    track.querySelectorAll('.custom-slide').forEach(slide => {
-        slide.style.minWidth = slide.style.maxWidth = slide.style.width = slideWidth + 'px';
+    track.querySelectorAll('.custom-slide').forEach((slide, index) => {
+        if (index < imagesCount) { // Only style first 4 slides
+            slide.style.minWidth = slide.style.maxWidth = slide.style.width = slideWidth + 'px';
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none'; // Hide duplicate slides
+        }
     });
     track.style.transform = `translateX(-${current * (slideWidth + gap)}px)`;
     renderDots();

@@ -1,4 +1,5 @@
 <footer class="footer">
+    <div class="footer-line-dark"></div>
     <div class="footer-content">
         <div class="footer-col">
             <h4>Contact</h4>

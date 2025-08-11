@@ -18,4 +18,8 @@
             <li><a href="/#contact">CONTACT</a></li>
         </ul>
     </nav>
-</header> 
+    <div class="header-lines">
+        <div class="header-line-dark"></div>
+        <div class="header-line-light"></div>
+    </div>
+</header>
