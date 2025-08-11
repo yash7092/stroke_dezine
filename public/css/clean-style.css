@@ -36,6 +36,24 @@
     position: relative;
 }
 
+/* Ensure no overflow on ultra-wide screens */
+@media (min-width: 1920px) {
+  .custom-slider-container {
+    max-width: 70vw !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: relative;
+  }
+  
+  .custom-slider-track {
+    gap: clamp(16px, 1.2vw, 24px) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+}
+
 .custom-slider-track {
     display: flex;
     gap: clamp(20px, 4vw, 32px);
@@ -802,9 +820,7 @@ footer {
     padding-right: 0;
   }
   
-  .custom-slide {
-    /* Width will be set by JavaScript for tablet (should be ~50% of container) */
-  }
+
   
   .custom-slide img {
     height: 250px;
@@ -912,7 +928,7 @@ footer {
 .flex { display: flex; }
 .grid { display: grid; }
 
-/* Ultra-wide screens (1920px+) */
+/* Ultra-wide screens (1920px+) - Fixed for proper image display */
 @media (min-width: 1920px) {
   .home-content,
   .about-content {
@@ -930,16 +946,35 @@ footer {
     min-height: clamp(250px, 22vw, 350px);
   }
   
+  /* Fixed container sizing for ultra-wide screens */
   .custom-slider-container {
-    max-width: clamp(1000px, 70vw, 1800px);
-    padding: 0 clamp(2rem, 4vw, 6rem);
+    max-width: 75vw;
+    padding: 0 clamp(1rem, 2vw, 3rem);
+    margin: 0 auto clamp(1rem, 3vw, 1.5rem) auto;
+    overflow: hidden !important;
   }
   
-  .projects-title {
-    margin-bottom: clamp(3rem, 5vw, 8rem);
+  .custom-slider-track {
+    gap: clamp(20px, 1.5vw, 32px);
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  
+  .custom-slide {
+    border-radius: clamp(12px, 1.5vw, 20px);
   }
   
   .custom-slide img {
-    height: clamp(300px, 20vw, 450px);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: clamp(8px, 1vw, 16px);
+    box-shadow: 0 clamp(6px, 1vw, 12px) clamp(20px, 3vw, 40px) rgba(0,0,0,0.16);
+  }
+  
+  .projects-title {
+    margin-bottom: clamp(3rem, 4vw, 6rem);
   }
 }

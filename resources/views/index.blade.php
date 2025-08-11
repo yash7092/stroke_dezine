@@ -248,7 +248,8 @@
                     <div class="custom-slide" onclick="goToProject('project-2')" style="cursor: pointer;"><img src="images/02.jpg" alt="Project 2"></div>
                     <div class="custom-slide" onclick="goToProject('project-3')" style="cursor: pointer;"><img src="images/03.jpg" alt="Project 3"></div>
                     <div class="custom-slide" onclick="goToProject('project-4')" style="cursor: pointer;"><img src="images/04.jpg" alt="Project 4"></div>
-
+                    <div class="custom-slide" onclick="goToProject('project-5')" style="cursor: pointer;"><img src="images/01.jpg" alt="Project 5"></div>
+                    <div class="custom-slide" onclick="goToProject('project-6')" style="cursor: pointer;"><img src="images/02.jpg" alt="Project 6"></div>
                 </div>
             </div>
             <div class="custom-slider-dots" id="customSliderDots"></div>
@@ -447,6 +448,7 @@ const dots = document.getElementById('customSliderDots');
 function getSlidesToShow() {
     if (window.innerWidth <= 768) return 1;
     if (window.innerWidth <= 1200) return 2;
+    // For all screens 1200px+, show 3 slides (including ultra-wide)
     return 3;
 }
 function updateSlider() {

@@ -928,6 +928,32 @@ nav {
     max-width: 1800px;
   }
   
+  /* Project section specific styling for ultra-wide */
+  .projects-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--section-padding);
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
+    background: var(--background-color);
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  
+  .projects-title {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
   .logo img {
     width: var(--logo-size-lg);
   }
