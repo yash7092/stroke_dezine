@@ -1,47 +1,73 @@
 
-/* Projects Section - Old Style */
+/* Projects Section - Enhanced Style matching style.css */
 .projects-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: var(--space-12) 0;
+    margin-top: clamp(4rem, 8vw, 8rem);
+    margin-bottom: clamp(2rem, 4vw, 4rem);
     background: var(--background);
 }
 
 .projects-title {
     text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: clamp(3rem, 6vw, 6rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
     font-size: var(--fluid-text-3xl);
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: clamp(1.5rem, 3vw, 4rem);
 }
 
+/* Custom Project Slider Styles */
 .custom-slider-container {
-    max-width: clamp(600px, 60vw, 1400px);
     width: 100%;
-    margin: 0 auto;
+    max-width: var(--container-max-width);
+    margin: 0 auto clamp(1rem, 3vw, 1.5rem) auto;
     overflow: hidden;
-    padding: 0 var(--container-padding);
+    display: flex;
+    justify-content: center;
 }
 
 .custom-slider-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    gap: clamp(20px, 4vw, 32px);
+    transition: transform 0.9s cubic-bezier(.77,0,.18,1);
+    width: 100%;
+    background: var(--background);
+    box-sizing: content-box;
+    padding-left: clamp(10px, 2vw, 16px);
+    padding-right: clamp(10px, 2vw, 16px);
 }
 
 .custom-slide {
-    min-width: 100%;
-    cursor: pointer;
-    border-radius: 8px;
+    background: transparent;
+    border-radius: clamp(12px, 3vw, 18px);
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 0 0;
+    min-width: 0;
+    max-width: none;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .custom-slide img {
     width: 100%;
-    height: clamp(250px, 25vw, 500px);
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+    border-radius: clamp(8px, 2vw, 12px);
+    box-shadow: 0 clamp(4px, 1.5vw, 8px) clamp(16px, 4vw, 32px) rgba(0,0,0,0.16);
+    background: var(--white);
+    display: block;
     transition: transform 0.3s ease;
 }
 
@@ -49,45 +75,54 @@
     transform: scale(1.02);
 }
 
+/* Enhanced Dots Styling */
 .custom-slider-dots {
     display: flex;
     justify-content: center;
-    gap: var(--space-2);
-    margin-top: var(--space-6);
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+    margin: clamp(1rem, 3vw, 1.5rem) 0 clamp(1.5rem, 4vw, 2.5rem) 0;
 }
 
 .custom-dot {
-    width: 10px;
-    height: 10px;
+    width: clamp(24px, 5vw, 36px);
+    height: clamp(4px, 1vw, 6px);
     background: var(--border-color);
-    border-radius: 50%;
-    cursor: pointer;
+    border-radius: clamp(2px, 0.5vw, 4px);
+    display: inline-block;
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .custom-dot.active {
-    background: var(--primary-color);
+    background: #ff8c00; /* Orange accent color */
 }
 
+/* Enhanced Button Styling */
 .custom-slider-btn-wrapper {
-    margin-top: var(--space-8);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
 }
 
 .custom-slider-btn {
-    background: var(--text-dark);
+    background: #ff8c00; /* Orange accent color */
     color: var(--white);
-    border: none;
-    padding: var(--space-4) var(--space-8);
-    border-radius: 8px;
-    font-size: var(--font-size-base);
+    font-size: var(--fluid-text-xl);
     font-weight: 600;
+    border: none;
+    border-radius: clamp(1.5rem, 3vw, 2rem);
+    padding: clamp(0.7rem, 2vw, 0.9rem) clamp(2rem, 4vw, 2.5rem);
     cursor: pointer;
+    box-shadow: 0 clamp(2px, 1vw, 4px) clamp(8px, 2.5vw, 16px) rgba(255,140,0,0.12);
     transition: all 0.2s ease;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .custom-slider-btn:hover {
-    background: var(--primary-color);
+    background: #ff8800;
+    box-shadow: 0 8px 32px rgba(255,140,0,0.18);
+    transform: translateY(-2px) scale(1.03);
 }
 
 /* ==========================================
@@ -107,17 +142,17 @@
   --border-light: #e2e8f0;
   --border-color: #cbd5e0;
   
-  /* Typography */
+  /* Typography - Reduced by 20% */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
+  --font-size-xs: 0.6rem;
+  --font-size-sm: 0.7rem;
+  --font-size-base: 0.8rem;
+  --font-size-lg: 0.9rem;
+  --font-size-xl: 1rem;
+  --font-size-2xl: 1.2rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 1.8rem;
+  --font-size-5xl: 2.4rem;
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -137,16 +172,16 @@
   --container-max-width: min(90vw, 2200px);
   --container-padding: clamp(1rem, 3vw, 5rem);
   
-  /* Fluid Typography - Extended to 2500px */
-  --fluid-text-xs: clamp(0.75rem, 0.8vw, 1.4rem);
-  --fluid-text-sm: clamp(0.875rem, 1vw, 1.8rem);
-  --fluid-text-base: clamp(1rem, 1.2vw, 2.2rem);
-  --fluid-text-lg: clamp(1.125rem, 1.5vw, 2.8rem);
-  --fluid-text-xl: clamp(1.25rem, 1.8vw, 3.5rem);
-  --fluid-text-2xl: clamp(1.5rem, 2.2vw, 4.5rem);
-  --fluid-text-3xl: clamp(1.875rem, 2.8vw, 6rem);
-  --fluid-text-4xl: clamp(2.25rem, 3.5vw, 8rem);
-  --fluid-text-5xl: clamp(3rem, 4.5vw, 12rem);
+  /* Fluid Typography - Extended to 2500px - Reduced by 20% */
+  --fluid-text-xs: clamp(0.6rem, 0.64vw, 1.12rem);
+  --fluid-text-sm: clamp(0.7rem, 0.8vw, 1.44rem);
+  --fluid-text-base: clamp(0.8rem, 0.96vw, 1.76rem);
+  --fluid-text-lg: clamp(0.9rem, 1.2vw, 2.24rem);
+  --fluid-text-xl: clamp(1rem, 1.44vw, 2.8rem);
+  --fluid-text-2xl: clamp(1.2rem, 1.76vw, 3.6rem);
+  --fluid-text-3xl: clamp(1.5rem, 2.24vw, 4.8rem);
+  --fluid-text-4xl: clamp(1.8rem, 2.8vw, 6.4rem);
+  --fluid-text-5xl: clamp(2.4rem, 3.6vw, 9.6rem);
 }
 
 /* Reset and Base Styles */
@@ -158,7 +193,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 12.8px;
 }
 
 body {
@@ -197,13 +232,16 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: var(--space-4) 0;
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  padding-left: clamp(6rem, 14vw, 24rem);
+  padding-right: clamp(6rem, 14vw, 24rem);
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -214,8 +252,10 @@ nav {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: var(--space-8);
+  gap: clamp(0.5rem, 1vw, 1.2rem);
   align-items: center;
+  margin-left: auto;
+  padding-left: clamp(4rem, 6vw, 8rem);
 }
 
 .nav-menu li a {
@@ -240,6 +280,7 @@ nav {
   font-size: var(--font-size-lg);
   cursor: pointer;
   color: var(--text-dark);
+  margin-left: auto;
 }
 
 /* Home Section */
@@ -313,8 +354,8 @@ nav {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 15vw, 450px), 1fr));
-  gap: clamp(1.5rem, 2.5vw, 6rem);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 4rem);
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--container-padding);
@@ -324,10 +365,14 @@ nav {
   background: var(--white);
   border: 1px solid var(--border-light);
   border-radius: clamp(8px, 1vw, 16px);
-  padding: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(0.75rem, 1.2vw, 1.2rem);
   text-align: center;
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  min-height: clamp(200px, 20vw, 300px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .service-card:hover {
@@ -339,7 +384,7 @@ nav {
 .service-icon {
   width: clamp(50px, 4vw, 120px);
   height: clamp(50px, 4vw, 120px);
-  margin: 0 auto clamp(1rem, 2vw, 3rem);
+  margin: 0 auto clamp(0.5rem, 1.2vw, 1.5rem);
   background: var(--background);
   border-radius: clamp(8px, 1vw, 20px);
   display: flex;
@@ -353,7 +398,7 @@ nav {
   font-size: var(--fluid-text-xl);
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: clamp(0.75rem, 1.5vw, 1.5rem);
+  margin-bottom: clamp(0.4rem, 0.8vw, 0.8rem);
 }
 
 .service-card p {
@@ -389,9 +434,9 @@ nav {
 }
 
 .about-image img {
-  max-width: clamp(300px, 20vw, 700px);
+  max-width: clamp(360px, 24vw, 840px);
   width: 100%;
-  max-height: clamp(250px, 18vw, 600px);
+  max-height: clamp(300px, 22vw, 720px);
   object-fit: contain;
   border-radius: clamp(8px, 1vw, 24px);
 }
@@ -536,6 +581,11 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  nav {
+    padding-left: clamp(1.5rem, 4vw, 3rem);
+    padding-right: clamp(1.5rem, 4vw, 3rem);
+  }
+  
   .menu-toggle {
     display: block;
   }
@@ -548,9 +598,10 @@ footer {
     right: 0;
     background: var(--white);
     flex-direction: column;
-    padding: var(--space-6);
+    padding: var(--space-4);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    gap: var(--space-4);
+    gap: clamp(0.3rem, 0.8vw, 0.8rem);
+    margin-left: 0;
   }
   
   .nav-menu.active {
@@ -569,12 +620,17 @@ footer {
   }
   
   .home-text h1 {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
   }
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  
+  .service-card {
+    min-height: clamp(160px, 15vw, 200px);
+    padding: clamp(0.5rem, 1vw, 0.8rem);
   }
   
   .projects-section {
@@ -582,16 +638,33 @@ footer {
   }
   
   .projects-title {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
     margin-bottom: var(--space-6);
   }
   
   .custom-slider-container {
-    max-width: 100%;
+    max-width: 98vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  
+  .custom-slider-track {
+    gap: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .custom-slide {
+    width: 98vw;
+    min-width: 98vw;
+    max-width: 98vw;
+    flex: 0 0 98vw;
   }
   
   .custom-slide img {
     height: 200px;
+    object-fit: contain;
+    background: var(--white);
   }
   
   .about-image img {
@@ -613,6 +686,31 @@ footer {
 
 /* Medium screens (tablets) */
 @media (max-width: 1024px) {
+  nav {
+    padding-left: clamp(3rem, 8vw, 10rem);
+    padding-right: clamp(3rem, 8vw, 10rem);
+  }
+  
+  .nav-menu {
+    gap: clamp(0.4rem, 1vw, 1rem);
+    padding-left: clamp(2rem, 4vw, 5rem);
+  }
+  
+  .custom-slider-container {
+    max-width: 600px;
+  }
+  
+  .custom-slide {
+    width: 320px;
+    min-width: 320px;
+    max-width: 320px;
+    flex: 0 0 320px;
+  }
+  
+  .custom-slide img {
+    height: 250px;
+  }
+  
   .home-content,
   .about-content {
     grid-template-columns: 1fr;
@@ -626,7 +724,12 @@ footer {
   
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-6);
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+  
+  .service-card {
+    min-height: clamp(180px, 18vw, 250px);
+    padding: clamp(0.75rem, 1.4vw, 1.2rem);
   }
   
   .custom-slider-container {
@@ -648,6 +751,11 @@ footer {
     --container-padding: 1rem;
   }
   
+  nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
   #home {
     min-height: 100vh;
     padding-top: 80px;
@@ -663,14 +771,14 @@ footer {
   }
   
   .home-text h1 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-xl);
   }
   
   .services-section h2,
   .about-text h2,
   .projects-title,
   .contact-form h2 {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
   }
   
   .custom-slide img {
@@ -684,7 +792,7 @@ footer {
   
   .custom-slider-btn {
     padding: var(--space-3) var(--space-6);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
   }
 }
 
@@ -710,12 +818,14 @@ footer {
   }
   
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
-    gap: clamp(3rem, 4vw, 8rem);
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(3rem, 4vw, 6rem);
+    max-width: 1800px;
   }
   
   .service-card {
-    padding: clamp(2rem, 4vw, 5rem);
+    padding: clamp(1rem, 1.6vw, 1.8rem);
+    min-height: clamp(250px, 22vw, 350px);
   }
   
   .custom-slider-container {
