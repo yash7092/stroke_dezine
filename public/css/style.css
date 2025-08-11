@@ -71,7 +71,7 @@ nav {
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: clamp(0.6rem, 1.5vw, 1rem); /* Responsive menu item spacing */
+  gap: clamp(0.3rem, 0.75vw, 0.5rem); /* Reduced by 50% - responsive menu item spacing */
 }
 
 .nav-menu li {
@@ -992,7 +992,7 @@ nav {
 
 .contact-form {
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px; /* Increased from 900px */
     padding: 3rem 2rem 2rem;
     background-color: #fff;
     border-radius: 12px;
@@ -1129,7 +1129,7 @@ nav {
     }
 
     .contact-form {
-        max-width: 1200px;
+        max-width: 1400px; /* Increased from 1200px */
         width: 100%;
         padding: 4rem 3rem 3rem;
     }

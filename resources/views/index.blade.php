@@ -83,12 +83,12 @@
                 <div class="home-content">
                     <div class="home-text custom-fade-in">
                         <h1>
-                            Nothing is Possible <br />
-                            Without Stroke, Everything <br />
-                            Starts with Stroke and Ends with Stroke
+                            Nothing is Possible<br>
+                            Without Stroke, Everything<br>
+                            Starts with Stroke and Ends with Stroke.
                         </h1>
                         <p>
-                            We create compelling designs that connect deeply and<br />
+                            We create compelling designs that connect deeply and<br>
                             inspire action from your customers
                         </p>
                     </div>
@@ -109,10 +109,9 @@
                         <h2>About us</h2>
                         <h3>Premium Design Services for Your Business</h3>
                         <p>
-                            Stroke Dezine is a team of talented designers dedicated to creating
-                            exceptional visual solutions for your brand. We blend creativity
-                            and professionalism to deliver high-quality design services that
-                            help you stand out.
+                            Stroke Dezine is a team of talented designers dedicated to creating exceptional
+                            visual solutions for your brand. We blend creativity and professionalism to
+                            deliver high-quality design services that help you stand out.
                         </p>
                     </div>
                 </div>
@@ -439,6 +438,7 @@
         fadeEls.forEach(el => fadeObserver.observe(el));
     </script>
     <script>
+<<<<<<< HEAD
 // Enhanced carousel slider logic with better slide handling
 const sliderTrack = document.getElementById('customSliderTrack');
 const sliderContainer = document.querySelector('.custom-slider-container');
@@ -449,6 +449,15 @@ const totalSlides = slides.length;
 let currentSlide = 0;
 let slidesToShow = 3; // Default for large screens
 
+=======
+// True carousel slider logic with dynamic slide width
+const imagesCount = 4; // Only 4 unique images, ignore duplicates
+let slidesToShow = 3;
+let current = 0;
+const track = document.getElementById('customSliderTrack');
+const container = document.querySelector('.custom-slider-container');
+const dots = document.getElementById('customSliderDots');
+>>>>>>> c76512cc2f6bf556dfc05d564218099bb7c69f33
 function getSlidesToShow() {
     if (window.innerWidth <= 768) return 1;
     if (window.innerWidth <= 1200) return 2;
@@ -457,6 +466,7 @@ function getSlidesToShow() {
 
 function updateSlider() {
     slidesToShow = getSlidesToShow();
+<<<<<<< HEAD
     const gap = parseInt(getComputedStyle(sliderTrack).gap) || 20; // Default gap of 20px if not set
     const containerWidth = sliderContainer.offsetWidth;
     const slideWidth = (containerWidth / slidesToShow) - (gap * (slidesToShow - 1) / slidesToShow);
@@ -466,6 +476,21 @@ function updateSlider() {
         slide.style.minWidth = `${slideWidth}px`;
         slide.style.maxWidth = `${slideWidth}px`;
         slide.style.flex = `0 0 ${slideWidth}px`;
+=======
+    const gap = parseInt(getComputedStyle(track).gap || 0);
+    const trackPadding = parseInt(getComputedStyle(track).paddingLeft || 0) + parseInt(getComputedStyle(track).paddingRight || 0);
+    const containerPadding = parseInt(getComputedStyle(container).paddingLeft || 0) + parseInt(getComputedStyle(container).paddingRight || 0);
+    const availableWidth = container.offsetWidth - containerPadding - trackPadding;
+    const slideWidth = (availableWidth - gap * (slidesToShow - 1)) / slidesToShow;
+    
+    track.querySelectorAll('.custom-slide').forEach((slide, index) => {
+        if (index < imagesCount) { // Only style first 4 slides
+            slide.style.minWidth = slide.style.maxWidth = slide.style.width = slideWidth + 'px';
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none'; // Hide duplicate slides
+        }
+>>>>>>> c76512cc2f6bf556dfc05d564218099bb7c69f33
     });
 
     // Update track width to fit all slides
