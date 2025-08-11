@@ -277,8 +277,8 @@ nav {
 #home {
   position: relative;
   width: 100%;
-  min-height: 80vh;
-  padding: 9rem 1rem 1rem 1rem; /* Increased top padding for more space from top */
+  min-height: 100vh;
+  padding: 12rem 1rem 1rem 1rem; /* Increased top padding for more space from top */
   background: var(--background-color);
 }
 
@@ -307,7 +307,7 @@ nav {
 
 .home-text h1 {
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 2.7rem;
   line-height: 1.2;
   color: var(--primary-color);
   text-align: center;
@@ -331,7 +331,7 @@ nav {
 
 .home-image img {
   width: 100%;
-  max-width: 260px; /* Reduced image size */
+  max-width: 460px; /* Reduced image size */
   height: auto;
   object-fit: contain;
   display: block;
@@ -395,7 +395,7 @@ nav {
     font-size: 1.5rem;
   }
   .home-image img {
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 
@@ -426,7 +426,7 @@ nav {
 
 @media (min-width: 1041px) and (max-width: 1500px) {
   #home {
-    padding: 7rem 1rem 1rem 1rem;
+    padding: 12rem 3rem 1rem 4rem;
   }
   .home-content {
     flex-direction: row !important;
@@ -442,13 +442,13 @@ nav {
     padding-bottom: 2rem;
   }
   .home-text h1 {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
   }
   .home-text p {
     font-size: 0.95rem;
   }
   .home-image img {
-    max-width: 320px;
+    max-width: 370px;
   }
 }
 
