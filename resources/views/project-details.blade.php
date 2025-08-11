@@ -29,8 +29,8 @@
     <meta name="twitter:image" content="https://strokedezine.com/{{ $mainImage }}" />
 
     <title>Sd stroke design</title>
-    <!-- ✅ Local CSS File -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!-- Clean Modern CSS -->
+    <link rel="stylesheet" href="{{ asset('css/clean-style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/project-details.css') }}">
 
     <!-- ✅ Favicon -->
