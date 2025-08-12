@@ -547,29 +547,11 @@ nav {
   text-align: left;
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  min-height: 70px;
+  min-height: clamp(70px, 8vw, 120px);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: clamp(0.8rem, 1.2vw, 1rem);
-}
-
-@media (min-width: 1921px) {
-  .service-card {
-    min-height: 60px !important;
-  }
-}
-
-@media (max-width: 1023px) {
-  .service-card {
-    min-height: 80px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .service-card {
-    min-height: 90px !important;
-  }
 }
 
 .service-card:hover {
@@ -906,7 +888,6 @@ footer {
   }
   
   .service-card {
-    min-height: clamp(160px, 15vw, 200px);
     padding: clamp(0.5rem, 1vw, 0.8rem);
   }
   
@@ -1016,7 +997,6 @@ footer {
   }
   
   .service-card {
-    min-height: clamp(180px, 18vw, 250px);
     padding: clamp(0.75rem, 1.4vw, 1.2rem);
   }
   
@@ -1143,7 +1123,6 @@ footer {
   
   .service-card {
     padding: clamp(1rem, 1.6vw, 1.8rem);
-    min-height: clamp(250px, 22vw, 350px);
   }
   
   /* Fix slider for ultra-wide screens */
