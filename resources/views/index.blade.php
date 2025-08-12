@@ -83,9 +83,9 @@
                 <div class="home-content">
                     <div class="home-text custom-fade-in">
                         <h1>
-                            Nothing is Possible<br>
-                            Without Stroke, Everything<br>
-                            Starts with Stroke and Ends with Stroke.
+                            Nothing is Possible Without&nbsp;Stroke,<br>
+                            Everything Starts with&nbsp;Stroke<br>
+                            and Ends with&nbsp;Stroke.
                         </h1>
                         <p>
                             We create compelling designs that connect deeply and<br>
@@ -125,80 +125,96 @@
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Creative Design</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Creative Design</h3>
+                        </div>
+                        <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than words.</p>
                     </div>
-                    <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than words.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Virtual Samples</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Virtual Samples</h3>
+                        </div>
+                        <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.</p>
                     </div>
-                    <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-vector-square"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Raster to Vector</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Raster to Vector</h3>
+                        </div>
+                        <p>Convert your documents into electronic formats securely without any hassles.</p>
                     </div>
-                    <p>Convert your documents into electronic formats securely without any hassles.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Web Design</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Web Design</h3>
+                        </div>
+                        <p>Make your way to the online world with our captivating Web Design services!</p>
                     </div>
-                    <p>Make your way to the online world with our captivating Web Design services!</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-print"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Files Ready to Print</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Files Ready to Print</h3>
+                        </div>
+                        <p>Cost-effective and custom print service from the best in the business.</p>
                     </div>
-                    <p>Cost-effective and custom print service from the best in the business.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-trademark"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Branding</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Branding</h3>
+                        </div>
+                        <p>We provide powerful branding services that will grow your business to new heights.</p>
                     </div>
-                    <p>We provide powerful branding services that will grow your business to new heights.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-tshirt"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Apparel Design</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Apparel Design</h3>
+                        </div>
+                        <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
                     </div>
-                    <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Color Separation</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Color Separation</h3>
+                        </div>
+                        <p>Get the best color separation service with top-notch results.</p>
                     </div>
-                    <p>Get the best color separation service with top-notch results.</p>
                 </div>
             </div>
 
@@ -211,36 +227,42 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Mobile App Development</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Mobile App Development</h3>
+                        </div>
+                        <p>Developing user-friendly and high-performance applications for Android and iOS devices.</p>
                     </div>
-                    <p>Developing user-friendly and high-performance applications for Android and iOS devices.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-desktop"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Software Development</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Software Development</h3>
+                        </div>
+                        <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.</p>
                     </div>
-                    <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <div class="service-title">
-                        <h3>Web Development</h3>
+                    <div class="service-content">
+                        <div class="service-title">
+                            <h3>Web Development</h3>
+                        </div>
+                        <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
                     </div>
-                    <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
-            <h1 class="projects-title custom-fade-in">My Projects</h1>
+            <h1 class="projects-title custom-fade-in">OUR PROJECTS</h1>  
             <div class="custom-slider-container">
                 <div class="custom-slider-track" id="customSliderTrack">
                     <div class="custom-slide" onclick="goToProject('project-1')" style="cursor: pointer;"><img src="images/01.jpg" alt="Project 1"></div>
@@ -253,14 +275,12 @@
                 </div>
             </div>
             <div class="custom-slider-dots" id="customSliderDots"></div>
-            <div class="custom-slider-btn-wrapper">
-                <button class="custom-slider-btn">MORE WORKS</button>
-            </div>
+
         </section>
 
         <section class="contact-section" id="contact">
             <div class="contact-form">
-                <h2>Get In Touch</h2>
+                
                 <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
                     @csrf
                     <div class="form-row">
