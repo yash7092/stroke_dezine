@@ -265,21 +265,19 @@
             <h1 class="projects-title custom-fade-in">OUR PROJECTS</h1>  
             <div class="custom-slider-container">
                 <div class="custom-slider-track" id="customSliderTrack">
-                    <div class="custom-slide" onclick="goToProject('project-1')" style="cursor: pointer;"><img src="images/01.jpg" alt="Project 1"></div>
-                    <div class="custom-slide" onclick="goToProject('project-2')" style="cursor: pointer;"><img src="images/02.jpg" alt="Project 2"></div>
-                    <div class="custom-slide" onclick="goToProject('project-3')" style="cursor: pointer;"><img src="images/03.jpg" alt="Project 3"></div>
-                    <div class="custom-slide" onclick="goToProject('project-4')" style="cursor: pointer;"><img src="images/04.jpg" alt="Project 4"></div>
+                    <div class="custom-slide" onclick="goToProject('branding')" style="cursor: pointer;"><img src="images/01.jpg" alt="Branding Project"></div>
+                    <div class="custom-slide" onclick="goToProject('embrodary')" style="cursor: pointer;"><img src="images/02.jpg" alt="Embrodary Project"></div>
+                    <div class="custom-slide" onclick="goToProject('packagedesign')" style="cursor: pointer;"><img src="images/03.jpg" alt="Package Design Project"></div>
+                    <div class="custom-slide" onclick="goToProject('rastertovector')" style="cursor: pointer;"><img src="images/04.jpg" alt="Raster to Vector Project"></div>
                     <div class="custom-slide" onclick="goToProject('project-5')" style="cursor: pointer;"><img src="images/01.jpg" alt="Project 5"></div>
                     <div class="custom-slide" onclick="goToProject('project-6')" style="cursor: pointer;"><img src="images/02.jpg" alt="Project 6"></div>
                 </div>
             </div>
             <div class="custom-slider-dots" id="customSliderDots"></div>
-
         </section>
 
         <section class="contact-section" id="contact">
             <div class="contact-form">
-                
                 <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
                     @csrf
                     <div class="form-row">
@@ -315,6 +313,37 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
+        // Navigation with URL change without page reload
+        function navigateToSection(event, sectionId) {
+            event.preventDefault();
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                const url = sectionId === 'home' ? '/' : '/' + sectionId;
+                history.pushState(null, null, url);
+            }
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            const path = window.location.pathname;
+            const sectionId = path === '/' ? 'home' : path.substring(1);
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Navigate to correct section on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const path = window.location.pathname;
+            const sectionId = path === '/' ? 'home' : path.substring(1);
+            const section = document.getElementById(sectionId);
+            if (section && sectionId !== 'home') {
+                setTimeout(() => section.scrollIntoView({ behavior: 'smooth' }), 100);
+            }
+        });
+
         // Navigation Menu Toggle
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
@@ -406,7 +435,7 @@
         }
 
         function goToProject(project) {
-            window.location.href = window.location.origin + '/project/' + project;
+            window.location.href = window.location.origin + '/' + project;
         }
 
         // Force AOS to refresh when scrolling to the top, so home animation re-triggers
