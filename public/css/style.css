@@ -69,15 +69,17 @@ nav {
 }
 
 .nav-menu {
-  display: flex;
+  display: flex !important;
   list-style: none;
-  gap: clamp(0.3rem, 0.75vw, 0.5rem); /* Reduced by 50% - responsive menu item spacing */
+  gap: 3rem !important; /* Fixed large gap between menu items */
+  margin-left: 8rem; /* Add even more space between logo and menu items */
 }
 
 .nav-menu li {
   position: relative;
   font-size: var(--font-size-sm);
   padding: 0.25rem 0;
+  margin: 0 2.5rem;
 }
 
 .nav-menu li a {
@@ -87,7 +89,7 @@ nav {
   display: inline-block;
   min-width: 44px;
   min-height: 44px;
-  padding: 1rem 0.5rem;
+  padding: 1rem 2rem;
   border-radius: 4px;
   font-size: 0.95rem;
 }
@@ -630,8 +632,8 @@ nav {
 }
 
 .service-icon {
-    width: 4.375rem;
-    height: 4.375rem;
+    width: 9rem;
+    height: 9rem;
     flex-shrink: 0;
     object-fit: contain;
 }
@@ -1890,8 +1892,8 @@ a:focus {
 }
 
 .service-icon {
-  width: 44px;
-  height: 44px;
+  width: 120px;
+  height: 120px;
 }
 
 @media (max-width: 1200px) {
