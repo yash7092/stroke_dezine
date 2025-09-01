@@ -102,11 +102,8 @@
         <section id="about">
             <div class="section-container">
                 <div class="about-content" data-aos="fade-up">
-                    <div class="about-image custom-fade-in">
-                        <img src="images/about.jpg" alt="About us image" />
-                    </div>
-                    <div class="about-text custom-fade-in" data-aos="fade-left" data-aos-delay="400">
-                        <h2>About us</h2>
+                    <div class="about-text custom-fade-in" data-aos="fade-up" data-aos-delay="400">
+                        <h2>About StrokeDezine</h2>
                         <h3>Premium Design Services for Your Business</h3>
                         <p>
                             Stroke Dezine is a team of talented designers dedicated to creating exceptional
@@ -277,33 +274,31 @@
         </section>
 
         <section class="contact-section" id="contact">
-            <div class="contact-form">
-                <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
-                    @csrf
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Name" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email" required />
-                        </div>
+            <div class="contact-container">
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <h2>PROJECT</h2>
+                        <h3>LET'S START</h3>
+                        <h1>LET'S DISCUSS</h1>
+                        <h1 class="red-text">YOUR PROJECT</h1>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" required />
-                        </div>
+                    <div class="contact-form">
+                        <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
+                            @csrf
+                            <div class="form-row">
+                                <input type="text" name="name" placeholder="Name" required />
+                                <input type="email" name="email" placeholder="E-mail" required />
+                            </div>
+                            <div class="form-row">
+                                <input type="tel" name="phone" placeholder="Phone number" required />
+                                <textarea name="message" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="send-btn">SEND</button>
+                        </form>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <textarea name="message" rows="5" placeholder="Describe what you need" required></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="submit-btn">
-                        Send Message
-                    </button>
-                </form>
-                <div id="successPopup" style="display:none; padding: var(--space-4); background: #48bb78; color: white; border-radius: 8px; text-align: center; margin-top: var(--space-4);">Mail sent successfully!</div>
+                </div>
             </div>
+            <div id="successPopup" style="display:none; padding: var(--space-4); background: #48bb78; color: white; border-radius: 8px; text-align: center; margin-top: var(--space-4);">Mail sent successfully!</div>
         </section>
     </main>
 
