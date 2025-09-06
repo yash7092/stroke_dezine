@@ -274,22 +274,25 @@
         </section>
 
         <section class="contact-section" id="contact">
+            <div class="contact-background">
+                <div class="project-bg-text">PROJECT</div>
+                <div class="svg-network-container">
+                    <img src="{{ asset('images/port_dodatok_1 (3).svg') }}" alt="Network Background" class="network-svg" id="networkSvg">
+                </div>
+            </div>
             <div class="contact-container">
                 <div class="contact-content">
-                    <div class="contact-text">
-                        <h2>PROJECT</h2>
-                        <h3>LET'S START</h3>
-                        <h1>LET'S DISCUSS</h1>
-                        <h1 class="red-text">YOUR PROJECT</h1>
-                    </div>
-                    <div class="contact-form">
+                    <div class="contact-left">
+                        <div class="contact-heading">
+                            <h3>LET'S START</h3>
+                            <h1>LET'S DISCUSS</h1>
+                            <h1 class="red-text">YOUR PROJECT</h1>
+                        </div>
                         <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
                             @csrf
-                            <div class="form-row">
+                            <div class="form-grid">
                                 <input type="text" name="name" placeholder="Name" required />
                                 <input type="email" name="email" placeholder="E-mail" required />
-                            </div>
-                            <div class="form-row">
                                 <input type="tel" name="phone" placeholder="Phone number" required />
                                 <textarea name="message" placeholder="Your message" required></textarea>
                             </div>
@@ -298,7 +301,7 @@
                     </div>
                 </div>
             </div>
-            <div id="successPopup" style="display:none; padding: var(--space-4); background: #48bb78; color: white; border-radius: 8px; text-align: center; margin-top: var(--space-4);">Mail sent successfully!</div>
+            <div id="successPopup" style="display:none; padding: 20px; background: #48bb78; color: white; border-radius: 8px; text-align: center; margin-top: 20px;">Mail sent successfully!</div>
         </section>
     </main>
 
@@ -480,6 +483,8 @@
         }, { threshold: 0.01 });
         fadeEls.forEach(el => fadeObserver.observe(el));
     </script>
+
+
     <script>
 // True carousel slider logic with dynamic slide width
 const imagesCount = 4; // Only 4 unique images, ignore duplicates
