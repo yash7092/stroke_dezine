@@ -79,6 +79,18 @@
 
     <main role="main">
         <section id="home">
+            <div class="home-corner-svg top-left">
+                <img src="{{ asset('images/port_dodatok_1 (3).svg') }}" alt="">
+            </div>
+            <div class="home-corner-svg top-right">
+                <img src="{{ asset('images/port_dodatok_1 (3).svg') }}" alt="">
+            </div>
+            <div class="home-corner-svg bottom-left">
+                <img src="{{ asset('images/port_dodatok_1 (3).svg') }}" alt="">
+            </div>
+            <div class="home-corner-svg bottom-right">
+                <img src="{{ asset('images/port_dodatok_1 (3).svg') }}" alt="">
+            </div>
             <div class="section-container">
                 <div class="home-content">
                     <div class="home-text custom-fade-in">
@@ -91,9 +103,6 @@
                             We create compelling designs that connect deeply and<br>
                             inspire action from your customers
                         </p>
-                    </div>
-                    <div class="home-image" data-aos="fade-left" data-aos-delay="200">
-                        <img src="images/home_pic.png" alt="Pointing Man" />
                     </div>
                 </div>
             </div>
@@ -482,6 +491,49 @@
           });
         }, { threshold: 0.01 });
         fadeEls.forEach(el => fadeObserver.observe(el));
+    </script>
+
+    <script>
+        // SVG mouse movement animation
+        const homeSection = document.getElementById('home');
+        const cornerSvgs = document.querySelectorAll('.home-corner-svg');
+        
+        homeSection.addEventListener('mousemove', (e) => {
+            const rect = homeSection.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            
+            cornerSvgs.forEach((svg, index) => {
+                const moveX = (x - 0.5) * 20;
+                const moveY = (y - 0.5) * 20;
+                
+                let transform = `translate(${moveX}px, ${moveY}px)`;
+                
+                if (svg.classList.contains('top-right')) {
+                    transform += ' scaleX(-1)';
+                } else if (svg.classList.contains('bottom-left')) {
+                    transform += ' scaleY(-1)';
+                } else if (svg.classList.contains('bottom-right')) {
+                    transform += ' scale(-1)';
+                }
+                
+                svg.style.transform = transform;
+            });
+        });
+        
+        homeSection.addEventListener('mouseleave', () => {
+            cornerSvgs.forEach(svg => {
+                if (svg.classList.contains('top-right')) {
+                    svg.style.transform = 'scaleX(-1)';
+                } else if (svg.classList.contains('bottom-left')) {
+                    svg.style.transform = 'scaleY(-1)';
+                } else if (svg.classList.contains('bottom-right')) {
+                    svg.style.transform = 'scale(-1)';
+                } else {
+                    svg.style.transform = 'translate(0, 0)';
+                }
+            });
+        });
     </script>
 
 
