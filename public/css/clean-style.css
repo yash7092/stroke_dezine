@@ -18,7 +18,7 @@
     padding-top: clamp(3rem, 6vw, 6rem);
     margin-bottom: clamp(1.5rem, 3vw, 2rem);
     font-size: var(--fluid-text-3xl);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text-dark);
 }
 
@@ -491,7 +491,7 @@ nav {
 .services-section h2 {
   text-align: center;
   font-size: var(--fluid-text-3xl);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-dark);
   margin-bottom: clamp(2rem, 4vw, 5rem);
   letter-spacing: -0.025em;
@@ -506,7 +506,7 @@ nav {
 .dev h1 {
   text-align: center;
   font-size: var(--fluid-text-3xl);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-dark);
   margin: clamp(3rem, 6vw, 6rem) 0 clamp(2rem, 4vw, 5rem) 0;
   letter-spacing: -0.025em;
@@ -617,7 +617,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: var(--space-12) 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/About_Image.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/About_Image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
