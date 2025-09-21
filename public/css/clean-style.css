@@ -285,6 +285,16 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  * {
+    max-width: 100vw !important;
+  }
+  
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -307,18 +317,26 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  overflow-x: hidden;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: var(--space-4) clamp(1rem, 4vw, 3rem);
+  justify-content: space-between;
+  padding: 1rem;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
-  gap: clamp(9rem, 24vw, 30rem);
+}
+
+@media (min-width: 769px) {
+  nav {
+    justify-content: center;
+    gap: clamp(16rem, 40vw, 50rem);
+    padding: var(--space-4) clamp(1rem, 4vw, 3rem);
+  }
 }
 
 .logo {
@@ -331,10 +349,16 @@ nav {
 }
 
 .nav-menu {
-  display: flex;
+  display: none;
   list-style: none;
-  gap: clamp(0.4rem, 1vw, 0.75rem);
   align-items: center;
+}
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: flex;
+    gap: clamp(0.4rem, 1vw, 0.75rem);
+  }
 }
 
 .nav-menu li a {
@@ -358,7 +382,6 @@ nav {
   border: none;
   cursor: pointer;
   color: var(--text-dark);
-  margin-left: auto;
   flex-direction: column;
   width: 30px;
   height: 30px;
@@ -376,7 +399,54 @@ nav {
   border-radius: 2px;
 }
 
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .nav-menu li {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--font-size-lg);
+  }
+}
 
+
+
+/* Desktop Navigation - Hide menu toggle */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
 
 /* Home Section */
 #home {
