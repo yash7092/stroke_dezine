@@ -24,7 +24,7 @@ class ProjectController extends Controller
             ],
             'project-2' => [
                 'title' => 'Embroidery Design Collection',
-                'description' => 'A stunning web design project that demonstrates our technical expertise.',
+                'description' => 'Embroidery Design Collection - Digital Art Meets Textile Craft.',
                 'mainImage' => 'images/02.jpg',
                 'relatedImages' => [
                     [
@@ -104,7 +104,7 @@ class ProjectController extends Controller
             ],
             'project-4' => [
                 'title' => 'Raster To Vector Collection',
-                'description' => 'A comprehensive digital marketing campaign with creative visuals.',
+                'description' => 'Image vectorization portfolio showcasing pixel-to-path conversion expertise.',
                 'mainImage' => 'images/04.jpg',
                 'relatedImages' => [
                     [
